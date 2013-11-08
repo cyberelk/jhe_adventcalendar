@@ -7,6 +7,8 @@
 	<data type="array">
 		<languageKey index="default" type="array">
             
+			<label index="tx_jheadventcalendar_domain_model_adventcalendar">Adventcalendar</label>
+
 		</languageKey>
 	</data>
 </T3locallang>
