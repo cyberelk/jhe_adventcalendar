@@ -1,0 +1,20 @@
+2013-11-13  Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V2.0.0
+
+	* included the right behaviour for the href params of the area tags 
+	  depending on selected ajax usage or not
+	* included local jquery library as fallback for ext t3jquery
+	* included jhe_adventcalendar.js for including the necessary jquery for 
+	  this extension
+	* included ajax.css for the styling of the modal box
+
+2013-11-08  Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V2.0.0
+
+	* Included be flexform and started with the ouptput in fe
+
+2013-11-07  Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V2.0.0
+
+	* Added jquery.imageareaselect lib
+
+2013-11-05  Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V2.0.0
+
+	* Initial commit after kickstarting the extension

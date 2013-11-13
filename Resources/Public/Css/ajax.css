@@ -1,0 +1,53 @@
+#boxes {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#mask {
+	position:absolute;
+	top: 0;
+	left: 0;
+	z-index:9000;
+	background-color:#000;
+	display:none;
+}   
+#boxes .window {
+	position:absolute;
+	width:440px;
+	height:200px;
+	display:none;
+	z-index:9999;
+	padding:20px;
+}
+#boxes #dialog {
+	background: #fff url('../img/bg_dialog.gif') no-repeat top right;
+	border: 2px solid #d3e4d5;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+#boxes #dialog #ajax-loader {
+	position:absolute;
+	height:128px; 
+	width:128px;
+	margin:-64px 0px 0px -64px;
+	top: 50%; 
+	left: 50%;
+}
+#boxes #dialog #dialogheader h2 {
+	border-bottom: 1px solid #f4f8f4;
+	font-size: 18px;
+	color: #d3e4d5;
+	width: 90%;
+	float: left;
+}
+#boxes #dialog #dialogheader #dialogclose {
+	width: 25px;
+	float: right;
+}
+#boxes #dialog #dialogheader #dialogclose:hover {
+	cursor: pointer;
+}
+#boxes #dialog #dialogcontent {
+	clear: both;
+}
