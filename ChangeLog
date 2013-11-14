@@ -1,3 +1,10 @@
+2013-11-14  Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V2.0.0
+
+	* added new folder Resources/Public/Images 
+	* copied image assets from old extension
+	* added jquery code for opening the dialog box of the wickets (but with 
+	  hardcoded variables at this time @todo)
+
 2013-11-13  Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V2.0.0
 
 	* included the right behaviour for the href params of the area tags 

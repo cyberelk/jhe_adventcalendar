@@ -133,7 +133,7 @@ class Tx_JheAdventcalendar_Controller_AdventcalendarController extends Tx_Extbas
 			
 			
 			
-			//...
+			
 		}
 		
 		
@@ -148,12 +148,6 @@ class Tx_JheAdventcalendar_Controller_AdventcalendarController extends Tx_Extbas
 			$js = '
 				<script type="text/javascript">
 
-				function clearVariables(){
-					document.getElementById(\'dialog\').style.top = "";
-					document.getElementById(\'dialog\').style.left = "";
-					document.getElementById(\'dialogheader\').innerHTML = "";
-					document.getElementById(\'dialogcontent\').innerHTML = "";
-				}';
 			if($this->conf['usesnow']){
 				$js .= '
 					var snowFlakeColor = \'' . $this->conf['snowFlakeColor'] . '\';

@@ -19,14 +19,14 @@
 	z-index:9999;
 	padding:20px;
 }
-#boxes #dialog {
-	background: #fff url('../img/bg_dialog.gif') no-repeat top right;
+#boxes #adventcalendar_dialog {
+	background: #fff url('../Images/bg_dialog.gif') no-repeat top right;
 	border: 2px solid #d3e4d5;
 	border-radius: 10px;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 }
-#boxes #dialog #ajax-loader {
+#boxes #adventcalendar_dialog #ajax-loader {
 	position:absolute;
 	height:128px; 
 	width:128px;
@@ -34,20 +34,20 @@
 	top: 50%; 
 	left: 50%;
 }
-#boxes #dialog #dialogheader h2 {
+#boxes #adventcalendar_dialog #dialogheader h2 {
 	border-bottom: 1px solid #f4f8f4;
 	font-size: 18px;
 	color: #d3e4d5;
 	width: 90%;
 	float: left;
 }
-#boxes #dialog #dialogheader #dialogclose {
+#boxes #adventcalendar_dialog #dialogheader #dialogclose {
 	width: 25px;
 	float: right;
 }
-#boxes #dialog #dialogheader #dialogclose:hover {
+#boxes #adventcalendar_dialog #dialogheader #dialogclose:hover {
 	cursor: pointer;
 }
-#boxes #dialog #dialogcontent {
+#boxes #adventcalendar_dialog #dialogcontent {
 	clear: both;
 }
