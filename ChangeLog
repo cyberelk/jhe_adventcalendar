@@ -1,9 +1,15 @@
+2013-11-15  Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V2.0.0
+
+	* assigned all necessay data for jquery into an json encoded string and 
+	  output it in a hidden field in list view
+	* retrieving this json string in jquery and decode it (has to be tested)
+
 2013-11-14  Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V2.0.0
 
 	* added new folder Resources/Public/Images 
 	* copied image assets from old extension
 	* added jquery code for opening the dialog box of the wickets (but with 
-	  hardcoded variables at this time @todo)
+	  hardcoded variables at this time)
 
 2013-11-13  Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V2.0.0
 

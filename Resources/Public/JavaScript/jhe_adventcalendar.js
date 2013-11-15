@@ -21,7 +21,32 @@ $(document).ready(function(){
 	var dialogFadeInTime = '1000';
 	var modalDialogFadeOutTime = '1000';
 	
-	$('<div id="boxes"><div id="adventcalendar_dialog" class="window" style="width: 960px;min-height:720px;"><div id="dialogheader"></div><div id="dialogcontent"></div></div><div id="mask"></div></div>').appendTo('body');
+	/*
+	 * JSON data from php class AdventcalendarController
+	 *	$dataArrForJqueryFunctions['layerWidth']
+	 *	$dataArrForJqueryFunctions['layerHeight']
+	 *	$dataArrForJqueryFunctions['username']
+	 *	$dataArrForJqueryFunctions['pathToAjaxLoaderImage']
+	 *	$dataArrForJqueryFunctions['pathToCloseButtonImage']
+	 *	$dataArrForJqueryFunctions['modalFadeInTime']
+	 *	$dataArrForJqueryFunctions['dialogFadeInTime']
+	 *	$dataArrForJqueryFunctions['modalDialogFadeOutTime']
+	 *	$dataArrForJqueryFunctions['snowUsage']
+	 *	$dataArrForJqueryFunctions['snowFlakeColor']
+	 *	$dataArrForJqueryFunctions['snowFlakeMinSize']
+	 *	$dataArrForJqueryFunctions['snowFlakeMaxSize']
+	 *	$dataArrForJqueryFunctions['snowTimeForNewFlake']
+	 */
+	
+	var serializedjquerydata = $('#serializedjquerydata').val();
+	
+	alert(serializedjquerydata);
+	
+	var serializedjquerydataObj = $.parseJSON(serializedjquerydata);
+	
+	alert(serializedjquerydataObj);
+	
+	$('<div id="boxes"><div id="adventcalendar_dialog" class="window" style="width: ' + layerWidth + 'px;min-height: ' + layerHeight + 'px;"><div id="dialogheader"></div><div id="dialogcontent"></div></div><div id="mask"></div></div>').appendTo('body');
 							
 	$('area').click(function(e){
 		e.preventDefault();
@@ -73,10 +98,6 @@ $(document).ready(function(){
 	});
 
 	//if close button is clicked
-	//$('#dialogclose').live('click', function(){
-	//	$('#mask, .window').fadeOut(modalDialogFadeOutTime);
-	//	window.setTimeout('clearVariables()','500');
-	//});
 	$(document).on('click', '#dialogclose', function(){
 		$('#mask, .window').fadeOut(modalDialogFadeOutTime);
 		window.setTimeout('clearVariables()','500');

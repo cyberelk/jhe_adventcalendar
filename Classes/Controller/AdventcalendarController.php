@@ -118,6 +118,21 @@ class Tx_JheAdventcalendar_Controller_AdventcalendarController extends Tx_Extbas
 		
 		$adventcalendar['usemapData']['imageMapAreas'] = $imageMapAreaArr;
 
+		$dataArrForJqueryFunctions['layerWidth'] = $adventcalendar['ajax']['layerWidth'];
+		$dataArrForJqueryFunctions['layerHeight'] = $adventcalendar['ajax']['layerHeight'];
+		$dataArrForJqueryFunctions['username'] = $GLOBALS['TSFE']->fe_user->user['username'];
+		$dataArrForJqueryFunctions['pathToAjaxLoaderImage'] = 'http://dev.teampoint.info/typo3conf/ext/jhe_adventcalendar/Resources/Public/Images/ajax-loader.gif';
+		$dataArrForJqueryFunctions['pathToCloseButtonImage'] = 'http://dev.teampoint.info/typo3conf/ext/jhe_adventcalendar/Resources/Public/Images/bt_close.gif';
+		$dataArrForJqueryFunctions['modalFadeInTime'] = $adventcalendar['ajax']['modalFadeInTime'];
+		$dataArrForJqueryFunctions['dialogFadeInTime'] = $adventcalendar['ajax']['dialogFadeInTime'];
+		$dataArrForJqueryFunctions['modalDialogFadeOutTime'] = $adventcalendar['ajax']['modalFadeOutTime'];
+		$dataArrForJqueryFunctions['snowUsage'] = $adventcalendar['snow']['snowUsage'];
+		$dataArrForJqueryFunctions['snowFlakeColor'] = $adventcalendar['snow']['snowFlakeColor'];
+		$dataArrForJqueryFunctions['snowFlakeMinSize'] = $adventcalendar['snow']['snowFlakeMinSize'];
+		$dataArrForJqueryFunctions['snowFlakeMaxSize'] = $adventcalendar['snow']['snowFlakeMaxSize'];
+		$dataArrForJqueryFunctions['snowTimeForNewFlake'] = $adventcalendar['snow']['snowTimeForNewFlake'];
+		
+		$adventcalendar['jQuery']['serializedData'] = json_encode($dataArrForJqueryFunctions);
 		
 		//include necessary js / css if confugured via ces flexform
 		if($adventcalendar['ajax']['useajax']){
@@ -141,7 +156,7 @@ class Tx_JheAdventcalendar_Controller_AdventcalendarController extends Tx_Extbas
 		
 		
 		/*if($this->conf['useajax']){
-			$user =  $GLOBALS['TSFE']->fe_user->user['username'];
+			
 
 			
 
