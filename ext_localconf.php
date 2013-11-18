@@ -12,9 +12,16 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 	),
 	// non-cacheable actions
 	array(
-		'Adventcalendar' => '',
+		'Adventcalendar' => 'list',
 		
 	)
 );
+
+
+/**
+ * Include the eId dispatcher in Frontend environment
+ * TODO Mind, that there is no access controll ATM!!!!
+ */
+$TYPO3_CONF_VARS['FE']['eID_include']['adventcalenderAjax'] = t3lib_extMgm::extPath('jhe_adventcalendar').'Classes/Utility/eIDDispatcher.php';
 
 ?>

@@ -1,3 +1,11 @@
+2013-11-18  Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V2.0.0
+
+	* using the assigned values from flexform in main javascript
+	* implemented the first steps towards ajax functionality (Dispatcher and 
+	  Controller)
+	* included setup.txt with typoscript defintion for special page type for 
+	  the html output of the wicket content
+
 2013-11-15  Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V2.0.0
 
 	* assigned all necessay data for jquery into an json encoded string and 
