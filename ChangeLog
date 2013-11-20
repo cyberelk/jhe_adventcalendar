@@ -1,3 +1,8 @@
+2013-11-20  Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V2.0.0
+
+	* some general code refactoring
+	* links for the usemap areas are now generated in fluid
+
 2013-11-18  Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V2.0.0
 
 	* using the assigned values from flexform in main javascript

@@ -53,10 +53,12 @@ class Tx_JheAdventcalendar_Controller_AjaxController extends Tx_Extbase_MVC_Cont
 		}
 		
 		$type = intval(t3lib_div::_GP('type'));
+		
+		$cObjData = $this->request->getContentObjectData();
+		
 		//$link = $this->cObj->getTypoLink_URL($pageID);
 		//$link = $this->pi_getPageLink($pageID);
 		$link = '?id=' . $pageID . '&type=' . $type;
-
 
 		if($_SERVER['HTTPS'] == 'on') {
 			$protocol = 'https://';

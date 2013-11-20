@@ -43,22 +43,22 @@ plugin.tx_jheadventcalendar._CSS_DEFAULT_STYLE (
 #
 lib.AJAXPrototype= PAGE
 lib.AJAXPrototype {
-  typeNum = 2412
-  config {
-    disableAllHeaderCode = 1
-    xhtml_cleaning = 0
-    admPanel = 0
-	debug = 0
-	no_cache = 1
-    additionalHeaders = Content-type:application/json
-  }
+	typeNum = 2412
+	config {
+		disableAllHeaderCode = 1
+		xhtml_cleaning = 0
+		admPanel = 0
+		debug = 0
+		no_cache = 1
+		additionalHeaders = Content-type:application/json
+	}
 }
- 
+
 #
 # Konkreter Pagetype 
 #
 AJAX_Plugintyp < lib.AJAXPrototype
 AJAX_Plugintyp {
-  typeNum = 24122013
-  10 < styles.content.get
+	typeNum = 24122013
+	10 < styles.content.get
 }

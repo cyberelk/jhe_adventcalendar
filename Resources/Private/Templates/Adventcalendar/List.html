@@ -1,14 +1,11 @@
 <f:layout name="Default" />
-
 <f:section name="main">
-
 	<!--<f:debug title="Debug of post array">{debug}</f:debug>-->
- 
 	<f:image src="{adventcalendar.background.image}" alt="{adventcalendar.background.altText}" width="{adventcalendar.background.imageWidth}" usemap="#{adventcalendar.usemapData.usemap}" />
-	
 	<map name="{adventcalendar.usemapData.usemap}" id="{adventcalendar.usemapData.usemap}">
 		<f:for each="{adventcalendar.usemapData.imageMapAreas}" as="area">
-			<area shape="{area.shape}" coords="{area.coords}"  href="{area.href}" id="{area.id}" alt="{area.alt}" />
+			<!--<area shape="{area.shape}" coords="{area.coords}"  href="{area.href}" id="{area.id}" alt="{area.alt}" />-->
+			<area shape="{area.shape}" coords="{area.coords}"  href="{f:uri.page(pageUid:{area.id})}" id="{area.id}" alt="{area.alt}" />
 		</f:for>
 	</map>
 	<input type="hidden" value="{adventcalendar.jQuery.serializedData}" id="serializedjquerydata" />

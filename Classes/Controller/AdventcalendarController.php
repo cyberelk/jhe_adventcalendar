@@ -170,6 +170,5 @@ class Tx_JheAdventcalendar_Controller_AdventcalendarController extends Tx_Extbas
 			$this->response->addAdditionalHeaderData('<script type="text/javascript" src="' . t3lib_extMgm::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/JavaScript/jquery.min.js" /></script>');
 		}
 	}
-
 }
 ?>
