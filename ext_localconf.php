@@ -8,15 +8,14 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 	'Adventcalendar',
 	array(
 		'Adventcalendar' => 'list',
-		
+
 	),
 	// non-cacheable actions
 	array(
 		'Adventcalendar' => 'list',
-		
+
 	)
 );
-
 
 /**
  * Include the eId dispatcher in Frontend environment

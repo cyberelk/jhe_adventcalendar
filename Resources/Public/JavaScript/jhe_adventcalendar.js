@@ -8,7 +8,7 @@ function clearVariables(){
 }
 
 $(document).ready(function(){
-	
+
 	var serializedjquerydataObj = $.parseJSON($('#serializedjquerydata').val());
 
 	var layerWidth = serializedjquerydataObj.layerWidth;
@@ -33,13 +33,13 @@ $(document).ready(function(){
 			flakeColor: snowFlakeColor
 		});
 	}
-	
+
 	$('<div id="boxes"><div id="adventcalendar_dialog" class="window" style="width: ' + layerWidth + 'px;min-height: ' + layerHeight + 'px;"><div id="dialogheader"></div><div id="dialogcontent"></div></div><div id="mask"></div></div>').appendTo('body');
-							
+
 	$('area').click(function(e){
 		e.preventDefault();
 		var id = $(this).attr('id');
-	
+
 		if(snowUsage){	
 			$.fn.snow({ 
 				minSize: snowFlakeMinSize, 
@@ -49,7 +49,7 @@ $(document).ready(function(){
 				appendTo: '#mask'
 			});
 		}
-		
+
 		$('#dialogcontent').append('<div id="ajax-loader"><img src="' + pathToAjaxLoaderImage + '" /></div>');
 
 		var winH = $(window).height();
@@ -84,7 +84,7 @@ $(document).ready(function(){
 				pluginName : pluginName,
 				controllerName : controllerName,
 				actionName : actionName,
-				type : '24122013'
+				type : '2412'
 			},
 			dataType: 'json',
 			success: function(result) {
@@ -111,7 +111,7 @@ $(document).ready(function(){
 			$.fn.stopsnow('#mask');
 			$.fn.stopsnow('body');
 		}
-		
+
 		$(this).fadeOut(modalDialogFadeOutTime);
 		$('.window').fadeOut(modalDialogFadeOutTime);
 		window.setTimeout('clearVariables()','500');
@@ -119,12 +119,12 @@ $(document).ready(function(){
 
 	//if close button is clicked
 	$(document).on('click', '#dialogclose', function(){
-		
+
 		if(snowUsage){
 			$.fn.stopsnow('#mask');
 			$.fn.stopsnow('body');
 		}
-		
+
 		$('#mask, .window').fadeOut(modalDialogFadeOutTime);
 		window.setTimeout('clearVariables()','500');
 	});

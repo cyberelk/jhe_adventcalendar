@@ -44,9 +44,9 @@ class Tx_JheAdventcalendar_Controller_AdventcalendarController extends Tx_Extbas
 		$adventcalendar['background']['altText'] = $this->settings['flexform']['altText'];
 		$adventcalendar['background']['imageWidth'] = $this->settings['flexform']['imageWidth'];
 		$adventcalendar['background']['imageHeight'] = $this->settings['flexform']['imageHeight'];
-	
+
 		$adventcalendar['usemapData']['usemap'] = $this->settings['flexform']['usemap'];
-		
+
 		$adventcalendar['wickets']['1'] = $this->settings['flexform']['wicket1'];
 		$adventcalendar['wickets']['2'] = $this->settings['flexform']['wicket2'];
 		$adventcalendar['wickets']['3'] = $this->settings['flexform']['wicket3'];
@@ -84,45 +84,30 @@ class Tx_JheAdventcalendar_Controller_AdventcalendarController extends Tx_Extbas
 		$adventcalendar['snow']['snowFlakeMinSize'] = $this->settings['flexform']['snowFlakeMinSize'];
 		$adventcalendar['snow']['snowFlakeMaxSize'] = $this->settings['flexform']['snowFlakeMaxSize'];
 		$adventcalendar['snow']['snowTimeForNewFlake'] = $this->settings['flexform']['snowTimeForNewFlake'];
-		
+
 		//rebuild image-map
 		$imageMapArr = t3lib_div::xml2tree($this->settings['flexform']['imageMap']);
 		$imageMapAreaArr = $imageMapArr['map']['0']['ch']['area'];
-		
+
 		$i=1;
 		foreach($imageMapAreaArr as $area){
 			$areaData = $area['attrs'];
-			
-			//create typolinks for area href
-			$cObj = t3lib_div::makeInstance('tslib_cObj');
-			$hrefTarget = $cObj->typoLink_URL(array('parameter' => $adventcalendar['wickets'][$i]));
-			
-			if($hrefTarget){
-				if($adventcalendar['ajax']['useajax']){
-					$imageMapAreaArr[$i]['shape'] = $areaData['shape'];
-					$imageMapAreaArr[$i]['coords'] = $areaData['coords'];
-					$imageMapAreaArr[$i]['href'] = '""';
-					$imageMapAreaArr[$i]['id'] = $adventcalendar['wickets'][$i];
-					$imageMapAreaArr[$i]['alt'] = $areaData['alt'];
-				} else {
-					$imageMapAreaArr[$i]['shape'] = $areaData['shape'];
-					$imageMapAreaArr[$i]['coords'] = $areaData['coords'];
-					$imageMapAreaArr[$i]['href'] = $hrefTarget;
-					$imageMapAreaArr[$i]['id'] = '';
-					$imageMapAreaArr[$i]['alt'] = $areaData['alt'];
-				}
-			}
+
+			$imageMapAreaArr[$i]['shape'] = $areaData['shape'];
+			$imageMapAreaArr[$i]['coords'] = $areaData['coords'];
+			$imageMapAreaArr[$i]['id'] = $adventcalendar['wickets'][$i];
+			$imageMapAreaArr[$i]['alt'] = $areaData['alt'];
 			
 			$i++;
 		}
-		
+
 		$adventcalendar['usemapData']['imageMapAreas'] = $imageMapAreaArr;
 
 		$dataArrForJqueryFunctions['layerWidth'] = $adventcalendar['ajax']['layerWidth'];
 		$dataArrForJqueryFunctions['layerHeight'] = $adventcalendar['ajax']['layerHeight'];
 		$dataArrForJqueryFunctions['username'] = $GLOBALS['TSFE']->fe_user->user['username'];
-		$dataArrForJqueryFunctions['pathToAjaxLoaderImage'] = 'http://dev.teampoint.info/typo3conf/ext/jhe_adventcalendar/Resources/Public/Images/ajax-loader.gif';
-		$dataArrForJqueryFunctions['pathToCloseButtonImage'] = 'http://dev.teampoint.info/typo3conf/ext/jhe_adventcalendar/Resources/Public/Images/bt_close.gif';
+		$dataArrForJqueryFunctions['pathToAjaxLoaderImage'] = t3lib_extMgm::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/Images/ajax-loader.gif';
+		$dataArrForJqueryFunctions['pathToCloseButtonImage'] = t3lib_extMgm::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/Images/bt_close.gif';
 		$dataArrForJqueryFunctions['modalFadeInTime'] = $adventcalendar['ajax']['modalFadeInTime'];
 		$dataArrForJqueryFunctions['dialogFadeInTime'] = $adventcalendar['ajax']['dialogFadeInTime'];
 		$dataArrForJqueryFunctions['modalDialogFadeOutTime'] = $adventcalendar['ajax']['modalFadeOutTime'];
@@ -131,26 +116,25 @@ class Tx_JheAdventcalendar_Controller_AdventcalendarController extends Tx_Extbas
 		$dataArrForJqueryFunctions['snowFlakeMinSize'] = $adventcalendar['snow']['snowFlakeMinSize'];
 		$dataArrForJqueryFunctions['snowFlakeMaxSize'] = $adventcalendar['snow']['snowFlakeMaxSize'];
 		$dataArrForJqueryFunctions['snowTimeForNewFlake'] = $adventcalendar['snow']['snowTimeForNewFlake'];
-		
+
 		$adventcalendar['jQuery']['serializedData'] = json_encode($dataArrForJqueryFunctions);
-		
+
 		//include necessary js / css if confugured via ces flexform
 		if($adventcalendar['ajax']['useajax']){
 			$this->addJqueryLibrary();
 			$this->response->addAdditionalHeaderData('<script type="text/javascript" src="' . t3lib_extMgm::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/JavaScript/jhe_adventcalendar.js" /></script>');
-			
 			$this->response->addAdditionalHeaderData('<link rel="stylesheet" type="text/css" href="' . t3lib_extMgm::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/Css/ajax.css" />');
-			
+
 			if($adventcalendar['snow']['snowUsage']){
 				$this->response->addAdditionalHeaderData('<script type="text/javascript" src="' . t3lib_extMgm::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/JavaScript/jquery.snow.js" /></script>');
 				$this->response->addAdditionalHeaderData('<script type="text/javascript" src="' . t3lib_extMgm::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/JavaScript/jquery.cookie.js" /></script>');
-			}			
+			}
 		}
 
 		$this->view->assign('adventcalendar', $adventcalendar);
 		$this->view->assign('debug', $adventcalendar);
 	}
-	
+
 	/**
 	 * Adds the jquery library
 	 *

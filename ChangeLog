@@ -1,3 +1,13 @@
+2013-11-21  Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V2.0.0
+
+	* testing of yesterdays changes
+	* debugging of link generation for the usemap areas
+	* erased the functionality for generating the href param in 
+	  AdventcalendarController
+	* simplyfied the typoscript setup for the new page type
+	* deleted the unnecessary domain model
+	* copied the manual fro mthe old extension to have a base for the changes
+
 2013-11-20  Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V2.0.0
 
 	* some general code refactoring
