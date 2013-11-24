@@ -53,11 +53,7 @@ class Tx_JheAdventcalendar_Controller_AjaxController extends Tx_Extbase_MVC_Cont
 		}
 		
 		$type = intval(t3lib_div::_GP('type'));
-		
-		$cObjData = $this->request->getContentObjectData();
-		
-		//$link = $this->cObj->getTypoLink_URL($pageID);
-		//$link = $this->pi_getPageLink($pageID);
+
 		$link = '?id=' . $pageID . '&type=' . $type;
 
 		if($_SERVER['HTTPS'] == 'on') {
@@ -65,10 +61,10 @@ class Tx_JheAdventcalendar_Controller_AjaxController extends Tx_Extbase_MVC_Cont
 		} else {
 			$protocol = 'http://';
 		}
-		$url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['SCRIPT_NAME'] . $link;
+		$url = $protocol . $_SERVER['SERVER_NAME'] . $_SERVER['SCRIPT_NAME'] . $link;
 		
 		$content = file_get_contents($url);
-		
+
 		echo json_encode(
 			array(
 				'pageTitle' => $pageName,
@@ -77,7 +73,6 @@ class Tx_JheAdventcalendar_Controller_AjaxController extends Tx_Extbase_MVC_Cont
 				'code' => $content
 			)
 		);
-		//die();	
 	}
 }
 ?>

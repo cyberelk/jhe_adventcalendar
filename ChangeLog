@@ -2,6 +2,14 @@
 
 	* removed jquery  library imagareaselect for next TER release
 	* uploaded the individual ext icon
+	* added a new variable for collecting the right href fpr the ajax request 
+	  in js
+	* areas for the imagemap are only created when the according page is 
+	  accessible
+	* the standard setup typoscript was debugged to retrieve all content from 
+	  the according pages
+	* changed the server variable in ajax controller for creating the url to 
+	  fetch the content
 
 2013-11-21  Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V2.0.0
 

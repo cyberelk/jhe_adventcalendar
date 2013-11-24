@@ -49,5 +49,14 @@ adventcalendar {
 		no_cache = 1
 		additionalHeaders = Content-type:application/json
 	}
-	10 < styles.content.get
+
+	10 = CONTENT
+	10 {
+		table = tt_content
+		select {
+			orderBy = sorting
+			where = colPos=0
+			languageField = sys_language_uid
+		}
+	}
 }

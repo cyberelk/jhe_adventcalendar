@@ -1,5 +1,3 @@
-//alert('Einbindung geht!!!');
-
 function clearVariables(){
 	document.getElementById('adventcalendar_dialog').style.top = "";
 	document.getElementById('adventcalendar_dialog').style.left = "";
@@ -73,11 +71,12 @@ $(document).ready(function(){
 		var controllerName ='Ajax';
 		var actionName ='processAjax';
 
+		var origin  = window.location.origin;
+
 		$.ajax({
-			url: 'index.php',
-			type: 'POST',
-			data: { 
-				eID : 'adventcalenderAjax',
+			url: origin + '/index.php?eID=adventcalenderAjax',
+			type: 'GET',
+			data: {
 				pageID : id,
 				user : username,
 				extensionName : extensionName,
@@ -97,9 +96,6 @@ $(document).ready(function(){
 					maskHeight = $(document).height();
 				}
 				$('#mask').css({'width':maskWidth,'height':maskHeight});
-			},
-			error: function(result){
-				alert('FEHLER: ' + result);
 			}
 		});
 	});
