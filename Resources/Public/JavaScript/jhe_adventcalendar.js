@@ -88,7 +88,7 @@ $(document).ready(function(){
 			dataType: 'json',
 			success: function(result) {
 				$('#ajax-loader').hide();
-				$('#dialogheader').html('<h2>' + result.pageTitle + '</h2><div id="dialogclose"><img src="' + pathToCloseButtonImage+ '" width="25" height="25" alt="schliessen..."</div>');
+				$('#dialogheader').html('<h2>' + result.pageTitle + '</h2><div id="dialogclose"><img src="' + pathToCloseButtonImage+ '" width="25" height="25" alt="schliessen..." /></div>');
 				$('#dialogcontent').html(result.code);
 				if($(document).height() < $('#adventcalendar_dialog').height()){
 					maskHeight = $('#adventcalendar_dialog').height(); 

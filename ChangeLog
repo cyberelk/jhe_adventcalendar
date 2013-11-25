@@ -1,6 +1,14 @@
+2013-11-25  Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V2.0.0
+
+	* corrected some typos
+	* debugged the missing labels in backend
+	* debugged the incorrect view of the close button and the ajax loader in 
+	  modal box
+	* debugged the missing view error in the ajax controller
+
 2013-11-24  Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V2.0.0
 
-	* removed jquery  library imagareaselect for next TER release
+	* removed jquery library imagareaselect for next TER release
 	* uploaded the individual ext icon
 	* added a new variable for collecting the right href fpr the ajax request 
 	  in js

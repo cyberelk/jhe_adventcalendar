@@ -106,8 +106,8 @@ class Tx_JheAdventcalendar_Controller_AdventcalendarController extends Tx_Extbas
 		$dataArrForJqueryFunctions['layerWidth'] = $adventcalendar['ajax']['layerWidth'];
 		$dataArrForJqueryFunctions['layerHeight'] = $adventcalendar['ajax']['layerHeight'];
 		$dataArrForJqueryFunctions['username'] = $GLOBALS['TSFE']->fe_user->user['username'];
-		$dataArrForJqueryFunctions['pathToAjaxLoaderImage'] = t3lib_extMgm::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/Images/ajax-loader.gif';
-		$dataArrForJqueryFunctions['pathToCloseButtonImage'] = t3lib_extMgm::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/Images/bt_close.gif';
+		$dataArrForJqueryFunctions['pathToAjaxLoaderImage'] = '/' .t3lib_extMgm::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/Images/ajax-loader.gif';
+		$dataArrForJqueryFunctions['pathToCloseButtonImage'] = '/' . t3lib_extMgm::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/Images/bt_close.gif';
 		$dataArrForJqueryFunctions['modalFadeInTime'] = $adventcalendar['ajax']['modalFadeInTime'];
 		$dataArrForJqueryFunctions['dialogFadeInTime'] = $adventcalendar['ajax']['dialogFadeInTime'];
 		$dataArrForJqueryFunctions['modalDialogFadeOutTime'] = $adventcalendar['ajax']['modalFadeOutTime'];

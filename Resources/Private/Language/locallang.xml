@@ -3,10 +3,107 @@
 	<meta type="array">
 		<type>module</type>
 		<description>Language labels for the Adventcalendar extension in the FRONTEND</description>
+		
 	</meta>
 	<data type="array">
 		<languageKey index="default" type="array">
 			<label index="tx_jheadventcalendar_domain_model_adventcalendar">Adventcalendar</label>
+			<label index="sheetLabelBackground">Background picture</label>
+			<label index="backgroundPic">Background picture for the adventcalendar</label>
+			<label index="backgroundPicWidth">Picture width in px</label>
+			<label index="backgroundPicHeight">Picture height in px</label>
+			<label index="backgroundPicAltTag">Alternative text</label>
+			<label index="sheetLabelImagemap">Imagemap data</label>
+			<label index="imagemapId">ID for ImageMap</label>
+			<label index="imagemapCode">ImageMap HTML code</label>
+			<label index="sheetLabelWickets">Target pages for wickets</label>
+			<label index="pidWicket1">PID wicket 1</label>
+			<label index="pidWicket2">PID wicket 2</label>
+			<label index="pidWicket3">PID wicket 3</label>
+			<label index="pidWicket4">PID wicket 4</label>
+			<label index="pidWicket5">PID wicket 5</label>
+			<label index="pidWicket6">PID wicket 6</label>
+			<label index="pidWicket7">PID wicket 7</label>
+			<label index="pidWicket8">PID wicket 8</label>
+			<label index="pidWicket9">PID wicket 9</label>
+			<label index="pidWicket10">PID wicket 10</label>
+			<label index="pidWicket11">PID wicket 11</label>
+			<label index="pidWicket12">PID wicket 12</label>
+			<label index="pidWicket13">PID wicket 13</label>
+			<label index="pidWicket14">PID wicket 14</label>
+			<label index="pidWicket15">PID wicket 15</label>
+			<label index="pidWicket16">PID wicket 16</label>
+			<label index="pidWicket17">PID wicket 17</label>
+			<label index="pidWicket18">PID wicket 18</label>
+			<label index="pidWicket19">PID wicket 19</label>
+			<label index="pidWicket20">PID wicket 20</label>
+			<label index="pidWicket21">PID wicket 21</label>
+			<label index="pidWicket22">PID wicket 22</label>
+			<label index="pidWicket23">PID wicket 23</label>
+			<label index="pidWicket24">PID wicket 24</label>
+			<label index="sheetLabelAjax">AJAX settings</label>
+			<label index="ajaxUsage">Use AJAX?</label>
+			<label index="ajaxLayerWidth">Layer width in px</label>
+			<label index="ajaxLayerMinHeight">Minimal layer height in px</label>
+			<label index="ajaxModalFadeInTime">Background layer FadeIn time in ms</label>
+			<label index="ajaxDialogFadeInTime">Dialog window FadeIn time in ms</label>
+			<label index="ajaxModalDialogFadeOutTime">FadeOut time in ms</label>
+			<label index="sheetLabelSnowstorm">Snowstorm settings</label>
+			<label index="snowUsage">Use snowstorm?</label>
+			<label index="snowFlakeColor">Color of snow flakes (RGB)</label>
+			<label index="snowFlakeMinSize">Minimum size of a singe snw flake in px</label>
+			<label index="snowFlakeMaxSize">Maximum size of a singe snw flake in px</label>
+            <label index="snowFlakeMaxSize">Maximale Höhe einer Schneeflocke in px</label>
+            <label index="snowTimeForNewFlake">Time before a new flake is generated in ms</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="tx_jheadventcalendar_domain_model_adventcalendar">Adventkalender</label>
+			<label index="sheetLabelBackground">Angaben zum Hintergrundbild</label>
+			<label index="backgroundPic">Hintergrundbild für den Adventskalender</label>
+			<label index="backgroundPicWidth">Bildbreite in px</label>
+			<label index="backgroundPicHeight">Bildhöhe in px</label>
+			<label index="backgroundPicAltTag">Alternative Text</label>
+			<label index="sheetLabelImagemap">Angaben zur Imagemap</label>
+			<label index="imagemapId">ImageMap-Bezeichnung</label>
+			<label index="imagemapCode">ImageMap-HTML-Code</label>
+			<label index="sheetLabelWickets">Zielseiten für die Türchen</label>
+			<label index="pidWicket1">PID Türchen 1</label>
+			<label index="pidWicket2">PID Türchen 2</label>
+			<label index="pidWicket3">PID Türchen 3</label>
+			<label index="pidWicket4">PID Türchen 4</label>
+			<label index="pidWicket5">PID Türchen 5</label>
+			<label index="pidWicket6">PID Türchen 6</label>
+			<label index="pidWicket7">PID Türchen 7</label>
+			<label index="pidWicket8">PID Türchen 8</label>
+			<label index="pidWicket9">PID Türchen 9</label>
+			<label index="pidWicket10">PID Türchen 10</label>
+			<label index="pidWicket11">PID Türchen 11</label>
+			<label index="pidWicket12">PID Türchen 12</label>
+			<label index="pidWicket13">PID Türchen 13</label>
+			<label index="pidWicket14">PID Türchen 14</label>
+			<label index="pidWicket15">PID Türchen 15</label>
+			<label index="pidWicket16">PID Türchen 16</label>
+			<label index="pidWicket17">PID Türchen 17</label>
+			<label index="pidWicket18">PID Türchen 18</label>
+			<label index="pidWicket19">PID Türchen 19</label>
+			<label index="pidWicket20">PID Türchen 20</label>
+			<label index="pidWicket21">PID Türchen 21</label>
+			<label index="pidWicket22">PID Türchen 22</label>
+			<label index="pidWicket23">PID Türchen 23</label>
+			<label index="pidWicket24">PID Türchen 24</label>
+			<label index="sheetLabelAjax">AJAX-Einstellungen</label>
+			<label index="ajaxUsage">AJAX nutzen?</label>
+			<label index="ajaxLayerWidth">Breite des Layers in px</label>
+			<label index="ajaxLayerMinHeight">Minimale Höhe des Layers in px</label>
+			<label index="ajaxModalFadeInTime">Hintergrundlayer FadeIn-Zeit in ms</label>
+			<label index="ajaxDialogFadeInTime">Dialog-Fenster FadeIn-Zeit in ms</label>
+			<label index="ajaxModalDialogFadeOutTime">FadeOut-Zeit in ms</label>
+			<label index="sheetLabelSnowstorm">Einstellungen Schneefall</label>
+			<label index="snowUsage">Schneefall einschalten?</label>
+			<label index="snowFlakeColor">Farbe des Schnees als RGB-Wert</label>
+			<label index="snowFlakeMinSize">Minimale Größe einer Schneeflocke in px</label>
+			<label index="snowFlakeMaxSize">Maximale Größe einer Schneeflocke in px</label>
+            <label index="snowTimeForNewFlake">Zeit bevor eine neuen Schneeflocke generiert wird in ms</label>
 		</languageKey>
 	</data>
 </T3locallang>
