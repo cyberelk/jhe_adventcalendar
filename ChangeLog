@@ -7,6 +7,7 @@
 	* debugged the missing view error in the ajax controller
 	* erased little css bug that provided the modal box from show all of the	
 	  content
+	* rewrote the manual (screenshots have to be edited later)
 
 2013-11-24  Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V2.0.0
 
