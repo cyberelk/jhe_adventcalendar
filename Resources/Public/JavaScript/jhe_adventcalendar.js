@@ -32,7 +32,7 @@ $(document).ready(function(){
 		});
 	}
 
-	$('<div id="boxes"><div id="adventcalendar_dialog" class="window" style="width: ' + layerWidth + 'px;min-height: ' + layerHeight + 'px;"><div id="dialogheader"></div><div id="dialogcontent"></div></div><div id="mask"></div></div>').appendTo('body');
+	$('<div id="boxes"><div id="adventcalendar_dialog" class="window" style="width: ' + layerWidth + 'px;min-height: ' + layerHeight + 'px;height: auto;"><div id="dialogheader"></div><div id="dialogcontent"></div></div><div id="mask"></div></div>').appendTo('body');
 
 	$('area').click(function(e){
 		e.preventDefault();

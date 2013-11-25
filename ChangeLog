@@ -5,6 +5,8 @@
 	* debugged the incorrect view of the close button and the ajax loader in 
 	  modal box
 	* debugged the missing view error in the ajax controller
+	* erased little css bug that provided the modal box from show all of the	
+	  content
 
 2013-11-24  Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V2.0.0
 
