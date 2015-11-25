@@ -239,3 +239,9 @@ pip-log.txt
 .idea/modules.xml
 
 .idea/vcs.xml
+
+.idea/deployment.xml
+
+.idea/encodings.xml
+
+.idea/webServers.xml

@@ -1,3 +1,10 @@
+2015-11-25  Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V2.0.1
+
+    * changed the order of the included js files to the correct way
+    * some minor jquery code reviews
+    * changed version to 2.0.1
+    * changed typo3 dependencies to 4.5.0-6.2.99
+
 2013-11-26  Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V2.0.0
 
 	* finished the new manual

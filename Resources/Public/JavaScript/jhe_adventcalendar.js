@@ -38,7 +38,7 @@ $(document).ready(function(){
 		e.preventDefault();
 		var id = $(this).attr('id');
 
-		if(snowUsage){	
+		if(snowUsage){
 			$.fn.snow({ 
 				minSize: snowFlakeMinSize, 
 				maxSize: snowFlakeMaxSize, 

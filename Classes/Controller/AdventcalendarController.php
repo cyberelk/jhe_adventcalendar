@@ -121,14 +121,16 @@ class Tx_JheAdventcalendar_Controller_AdventcalendarController extends Tx_Extbas
 
 		//include necessary js / css if confugured via ces flexform
 		if($adventcalendar['ajax']['useajax']){
+
 			$this->addJqueryLibrary();
-			$this->response->addAdditionalHeaderData('<script type="text/javascript" src="' . t3lib_extMgm::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/JavaScript/jhe_adventcalendar.js" /></script>');
-			$this->response->addAdditionalHeaderData('<link rel="stylesheet" type="text/css" href="' . t3lib_extMgm::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/Css/ajax.css" />');
 
 			if($adventcalendar['snow']['snowUsage']){
-				$this->response->addAdditionalHeaderData('<script type="text/javascript" src="' . t3lib_extMgm::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/JavaScript/jquery.snow.js" /></script>');
 				$this->response->addAdditionalHeaderData('<script type="text/javascript" src="' . t3lib_extMgm::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/JavaScript/jquery.cookie.js" /></script>');
+				$this->response->addAdditionalHeaderData('<script type="text/javascript" src="' . t3lib_extMgm::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/JavaScript/jquery.snow.js" /></script>');
 			}
+
+			$this->response->addAdditionalHeaderData('<script type="text/javascript" src="' . t3lib_extMgm::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/JavaScript/jhe_adventcalendar.js" /></script>');
+			$this->response->addAdditionalHeaderData('<link rel="stylesheet" type="text/css" href="' . t3lib_extMgm::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/Css/ajax.css" />');
 		}
 
 		$this->view->assign('adventcalendar', $adventcalendar);
